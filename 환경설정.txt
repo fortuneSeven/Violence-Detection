@@ -1,0 +1,15 @@
+# 1️⃣ 가상환경 생성 (Python 3.9 기준)
+conda create -n violence-detection python=3.9 -y
+
+# 2️⃣ 가상환경 활성화
+conda activate violence-detection
+
+# 3️⃣ 필수 패키지 설치
+pip install tensorflow==2.15.0 keras==2.15.0 torch==2.3.0 torchvision==0.18.0 opencv-python==4.9.0.80 opencv-python-headless==4.9.0.80 numpy==1.26.4 pandas==2.2.2 matplotlib==3.9.0 tqdm==4.66.2 requests==2.32.2 Pillow==10.3.0 h5py==3.10.0 transformers==4.43.0 accelerate==0.32.0 huggingface_hub==0.23.0
+
+# 4️⃣ (Mac M1/M2 전용) GPU 가속용 TensorFlow 교체
+# → macOS 아닌 팀원은 이 줄 건너뛰기
+pip install tensorflow-macos tensorflow-metal
+
+# 5️⃣ 코드 실행
+python main.py
